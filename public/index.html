@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Últimas Notícias - Hugo Gloss</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body>
+    <header>
+        <img src="/assets/logo.png" alt="Hugo Gloss Logo">
+    </header>
+
+    <h1>Feed de Notícias</h1>
+    <hr class="divider">
+
+    <main>
+        <div style="text-align: left; margin-bottom: 20px;">
+            <button id="filterButton">Clique para filtrar Notícias Inapropriadas</button>
+        </div>
+        <div id="news-container"></div>
+        <p id="error-message" style="display:none;">Não foi possível carregar as notícias no momento. Tente novamente mais tarde.</p>
+    </main>
+
+    <footer>
+        <p>Desenvolvido por Grupo 2.</p>
+        <p>© 2024 Hugo Gloss. Todos os direitos reservados.</p>
+    </footer>
+
+    <div id="access-denied-message" style="display:none;">Acesso Negado: Você precisa ser maior de 18 anos.</div>
+    <div class="blur" style="display:none;"></div>
+    <div id="age-check-popup" style="display:none;">
+        <p>Você é maior de 18 anos?</p>
+        <button id="yesButton">Sim</button>
+        <button id="noButton">Não</button>
+    </div>
+
+    <script src="/js/script.js"></script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

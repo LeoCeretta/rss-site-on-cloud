@@ -1,0 +1,15 @@
+services:
+  app:
+    build: .
+    ports:
+      - "3000:3000"  # Mapeia a porta 3000 do container para a porta 3000 do host
+    volumes:
+      - .:/usr/src/app  # Sincroniza os arquivos locais com o diretório de trabalho do container
+      - /usr/src/app/node_modules  # Exclui a pasta node_modules para evitar conflitos
+    environment:
+      - AWS_ACCESS_KEY_ID=${AWS_ACCESS_KEY_ID}
+      - AWS_SECRET_ACCESS_KEY=${AWS_SECRET_ACCESS_KEY}
+      - AWS_SECRET_ACCESS_TOKEN=${AWS_SECRET_ACCESS_TOKEN}
+      - AWS_REGION=${AWS_REGION}
+      - NODE_ENV=development  # Define a variável de ambiente como desenvolvimento
+    command: ["npx", "nodemon", "src/app.js"]  # Usa o nodemon para reiniciar o servidor automaticamente
